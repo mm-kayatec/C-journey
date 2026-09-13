@@ -16,9 +16,18 @@ Concepts practiced:
 - Printing output with `printf` and formatting decimals (`%.2f`)
 - Key gotcha: the need for a space before `%c` (`" %c"`) to skip the leftover newline character in the input buffer
 
+### `ex03_alphabet_number.c`
+Reading a lowercase letter from the user and printing its position in the alphabet (e.g. `a` → `1`, `b` → `2`).
+
+Concepts practiced:
+- Character arithmetic: characters are stored as integer (ASCII) codes, so subtracting `'a'` from a letter gives its zero-based position in the alphabet
+- Casting between `char` and `int` with `(int)`
+- (Optional extension) using `tolower()` from `<ctype.h>` to support both uppercase and lowercase input
+
 ## Run
 
-\`\`\`bash
+```bash
 gcc ex01_hello.c -o hello && ./hello
 gcc ex02_variables.c -o variables && ./variables
-\`\`\`
+gcc ex03_alphabet_number.c -o alphabet_number && ./alphabet_number
+```
